@@ -321,6 +321,7 @@ int Menu_Main(void)
     int update_screen = 1;
 	int delay = 0;
     int doInstall = 0;
+	int yPressed = 0;
     int vpadError = -1;
     VPADData vpad_data;
 	char lastFolder[256];
@@ -430,7 +431,6 @@ int Menu_Main(void)
 
         VPADRead(0, &vpad_data, 1, &vpadError);
 		u32 pressedBtns = 0;
-		int yPressed = 0;
 
 		if (!vpadError)
 			pressedBtns = vpad_data.btns_d | vpad_data.btns_h;
