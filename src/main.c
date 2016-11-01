@@ -474,7 +474,7 @@ int Menu_Main(void)
 				yPressed = 0;
 
 			// Up/Down Buttons
-			if (pressedBtns & VPAD_BUTTON_UP)
+			if (pressedBtns & VPAD_BUTTON_DOWN)
 			{
 				if (--delay <= 0)
 				{
@@ -485,7 +485,7 @@ int Menu_Main(void)
 					delay = (vpad_data.btns_d & VPAD_BUTTON_UP) ? 6 : 0;
 				}
 			}
-			else if (pressedBtns & VPAD_BUTTON_DOWN)
+			else if (pressedBtns & VPAD_BUTTON_UP)
 			{
 				if (--delay <= 0)
 				{
